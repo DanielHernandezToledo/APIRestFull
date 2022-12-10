@@ -5,9 +5,13 @@ namespace App;
 use App\Scopes\BuyerScope;
 use Illuminate\Database\Eloquent\Model;
 use App\Transaction;
+use App\Transformers\BuyerTransformer;
 
 class Buyer extends User
 {
+
+    public $transformer = BuyerTransformer::class;
+
     protected static function boot()
     {
         parent::boot();
